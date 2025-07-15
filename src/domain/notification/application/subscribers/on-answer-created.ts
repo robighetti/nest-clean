@@ -1,8 +1,8 @@
-import { DomainEvents } from '@/core/events/domain-events'
-import { EventHandler } from '@/core/events/event-handler'
-import { QuestionsRepository } from '@/domain/forum/application/repositories/questions-repository'
-import { AnswerCreatedEvent } from '@/domain/forum/enterprise/events/answer-created-event'
-import { SendNotificationUseCase } from '@/domain/notification/application/use-cases/send-notification'
+import { DomainEvents } from "@/core/events/domain-events"
+import { EventHandler } from "@/core/events/event-handler"
+import { QuestionsRepository } from "@/domain/forum/application/repositories/questions-repository"
+import { AnswerCreatedEvent } from "@/domain/forum/enterprise/events/answer-created-event"
+import { SendNotificationUseCase } from "@/domain/notification/application/use-cases/send-notification"
 
 export class OnAnswerCreated implements EventHandler {
   constructor(
@@ -29,7 +29,7 @@ export class OnAnswerCreated implements EventHandler {
         recipientId: question.authorId.toString(),
         title: `Nova resposta em "${question.title
           .substring(0, 40)
-          .concat('...')}"`,
+          .concat("...")}"`,
         content: answer.excerpt,
       })
     }

@@ -1,9 +1,9 @@
-import { Question } from '@/domain/forum/enterprise/entities/question'
-import { QuestionsRepository } from '../repositories/questions-repository'
-import { UniqueEntityID } from '@/core/entities/unique-entity-id'
-import { Either, right } from '@/core/either'
-import { QuestionAttachment } from '@/domain/forum/enterprise/entities/question-attachment'
-import { QuestionAttachmentList } from '@/domain/forum/enterprise/entities/question-attachment-list'
+import { Question } from "@/domain/forum/enterprise/entities/question"
+import { QuestionsRepository } from "../repositories/questions-repository"
+import { UniqueEntityID } from "@/core/entities/unique-entity-id"
+import { Either, right } from "@/core/either"
+import { QuestionAttachment } from "@/domain/forum/enterprise/entities/question-attachment"
+import { QuestionAttachmentList } from "@/domain/forum/enterprise/entities/question-attachment-list"
 
 interface CreateQuestionUseCaseRequest {
   authorId: string
